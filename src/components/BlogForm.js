@@ -5,36 +5,31 @@ import { styled } from "@mui/material/styles";
 
 const StyledInput = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
-    height: 56,
     borderRadius: 25,
     backgroundColor:
       theme.palette.mode === "dark"
-        ? theme.palette.grey[200] // dark background
-        : theme.palette.grey[200], // light background
+        ? theme.palette.grey[200]
+        : theme.palette.grey[200],
 
     border: `1px solid ${theme.palette.grey[400]}`,
     paddingLeft: 12,
     paddingRight: 12,
 
     "& input": {
-      color:
-        theme.palette.mode === "dark"
-          ? theme.palette.grey[900] 
-          : "#333", 
+      color: theme.palette.mode === "dark" ? theme.palette.grey[900] : "#333",
     },
     "& textarea": {
-      color:
-        theme.palette.mode === "dark"
-          ? theme.palette.grey[900] 
-          : "#333", 
+      color: theme.palette.mode === "dark" ? theme.palette.grey[900] : "#333",
     },
 
-    "& fieldset": {
-      border: "none", 
+    "& .MuiSelect-select": {
       color:
         theme.palette.mode === "dark"
-          ? theme.palette.grey[900] 
-          : "#333", 
+          ? theme.palette.grey[900] // black-ish in dark mode
+          : "#333", // dark gray in light mode
+    },
+    "& fieldset": {
+      borderColor: theme.palette.divider,
     },
 
     "&:hover": {
@@ -66,8 +61,6 @@ const StyledInput = styled(TextField)(({ theme }) => ({
         ? theme.palette.grey[600]
         : theme.palette.text.primary,
   },
-
-
 }));
 const BlogSchema = Yup.object().shape({
   title: Yup.string().required("Title is required"),
@@ -116,6 +109,8 @@ const BlogForm = ({ initialValues, onSubmit }) => {
               helperText={touched.content && errors.content}
               fullWidth
               multiline
+              minRows={4}
+              maxRows={6}
             />
 
             <StyledInput

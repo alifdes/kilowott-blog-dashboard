@@ -53,7 +53,7 @@ const CustomModal = ({
           pr: 2,
         }}
       >
-        {isDelete ? "CONFIRM DELETE" : title}
+        {isDelete ? "DELETE BLOG" : title}
 
         <CloseIcon
           onClick={onClose}

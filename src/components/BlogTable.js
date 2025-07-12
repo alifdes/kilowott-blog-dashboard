@@ -104,7 +104,7 @@ const BlogTable = ({
                     display="flex"
                     justifyContent="center"
                     alignItems="center"
-                    gap={1.5} // or gap={2} for more spacing
+                    gap={1.5}
                   >
                     <MuiButton
                       onClick={() => onEdit(post)}
@@ -129,6 +129,7 @@ const BlogTable = ({
         </TableBody>
       </Table>
       <TablePagination
+
         component="div"
         count={totalCount}
         page={page}
@@ -139,6 +140,14 @@ const BlogTable = ({
           setPage(0);
         }}
         rowsPerPageOptions={[5, 10, 25]}
+        sx={{
+          '.css-5n9wn6-MuiInputBase-root-MuiTablePagination-select': {
+            margin: '10px',
+          },
+          '.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar .MuiTablePagination-actions':{
+            margin: '0px',
+          }
+        }}
       />
     </TableContainer>
   );

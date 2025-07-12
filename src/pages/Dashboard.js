@@ -32,8 +32,8 @@ const Dashboard = () => {
 
   const [search, setSearch] = useState("");
   const [sortConfig, setSortConfig] = useState({
-    key: "title",
-    direction: "asc",
+    key: "date",
+    direction: "dec",
   });
   const [page, setPage] = useState(0);
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));

@@ -1,7 +1,7 @@
 const dummyBlogs = [
   {
     id: "1",
-    title: "Understanding React State",
+    title: "Lorem ipsum dolor sit amet",
     author: "John Doe",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     date: "2025-07-01",
@@ -9,7 +9,7 @@ const dummyBlogs = [
   },
   {
     id: "2",
-    title: "React Hooks Introduction",
+    title: "Sed ut perspiciatis",
     author: "Jane Smith",
     content: "Sed ut perspiciatis unde omnis iste natus error sit.",
     date: "2025-06-25",
@@ -17,7 +17,7 @@ const dummyBlogs = [
   },
   {
     id: "3",
-    title: "Styled Components in MUI",
+    title: "Duis aute irure dolor",
     author: "Alisha Fernandes",
     content: "Duis aute irure dolor in reprehenderit in voluptate.",
     date: "2025-06-20",
@@ -25,7 +25,7 @@ const dummyBlogs = [
   },
   {
     id: "4",
-    title: "React vs Angular",
+    title: "Ut enim ad minima veniam",
     author: "Sameer Kumar",
     content: "Ut enim ad minima veniam, quis nostrum exercitationem.",
     date: "2025-06-18",
@@ -33,7 +33,7 @@ const dummyBlogs = [
   },
   {
     id: "5",
-    title: "React Query Basics",
+    title: "Quis autem vel eum",
     author: "Sarah Lee",
     content: "Quis autem vel eum iure reprehenderit qui in ea voluptate.",
     date: "2025-06-15",
@@ -41,7 +41,7 @@ const dummyBlogs = [
   },
   {
     id: "6",
-    title: "Dark Mode with MUI",
+    title: "Neque porro quisquam",
     author: "Michael Scott",
     content: "Neque porro quisquam est qui dolorem ipsum quia dolor.",
     date: "2025-06-10",
@@ -49,7 +49,7 @@ const dummyBlogs = [
   },
   {
     id: "7",
-    title: "JavaScript Tips and Tricks",
+    title: "Excepteur sint occaecat",
     author: "Pam Beesly",
     content: "Excepteur sint occaecat cupidatat non proident.",
     date: "2025-06-05",
@@ -57,7 +57,7 @@ const dummyBlogs = [
   },
   {
     id: "8",
-    title: "Why Use React?",
+    title: "Ut labore",
     author: "Dwight Schrute",
     content: "Ut labore et dolore magna aliqua.",
     date: "2025-06-01",
@@ -65,7 +65,7 @@ const dummyBlogs = [
   },
   {
     id: "9",
-    title: "Next.js vs React",
+    title: "Nemo enim",
     author: "Jim Halpert",
     content: "Nemo enim ipsam voluptatem quia voluptas.",
     date: "2025-05-30",
@@ -73,7 +73,7 @@ const dummyBlogs = [
   },
   {
     id: "10",
-    title: "Performance Optimization in React",
+    title: "Quis autem",
     author: "Stanley Hudson",
     content: "Quis autem vel eum iure reprehenderit.",
     date: "2025-05-25",

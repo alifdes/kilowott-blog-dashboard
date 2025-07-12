@@ -9,7 +9,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 const StyledInput = styled(TextField)(({ theme }) => ({
   width: "100%",
-  maxWidth: "40%",
+  maxWidth: "400px",
   "& .MuiOutlinedInput-root": {
     height: 40,
     paddingRight: 8,
