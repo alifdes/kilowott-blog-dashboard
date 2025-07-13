@@ -1,11 +1,11 @@
 import { Box, Typography, IconButton, useTheme } from "@mui/material";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
-import { ColorModeContext } from "../theme/ThemeContext";
 import { useContext } from "react";
+import { ColorModeContext } from "../../theme/ThemeContext";
 
 const DashboardHeader = () => {
-  const theme = useTheme(); // to access current mode (light/dark)
-  const colorMode = useContext(ColorModeContext); // to access toggle function
+  const theme = useTheme(); 
+  const colorMode = useContext(ColorModeContext);
 
   return (
     <Box

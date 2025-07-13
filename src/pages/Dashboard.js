@@ -1,17 +1,14 @@
 import { useState, useEffect } from "react";
-import {
-  Container,
-  Box,
-} from "@mui/material";
-import SearchBar from "../components/SearchBar";
-import BlogForm from "../components/BlogForm";
-import CustomModal from "../components/CustomModal";
-import dummyBlogs from "../data/Blogs";
-import MuiButton from "../components/MuiButton";
-import BlogTable from "../components/BlogTable";
-import BlogHeader from "../components/BlogHeader";
-import AddIcon from '@mui/icons-material/Add';
-import { useMediaQuery, useTheme } from '@mui/material';
+import { Container, Box } from "@mui/material";
+import SearchBar from "../components/blog/SearchBar";
+import BlogForm from "../components/blog/BlogForm";
+import CustomModal from "../ui/CustomModal";
+import dummyBlogs from "../mock/Blogs";
+import BlogTable from "../components/blog/BlogTable";
+import BlogHeader from "../components/blog/BlogHeader";
+import AddIcon from "@mui/icons-material/Add";
+import { useMediaQuery, useTheme } from "@mui/material";
+import CustomButton from "../ui/CustomButton";
 
 const Dashboard = () => {
   const [posts, setPosts] = useState(() => {
@@ -36,7 +33,7 @@ const Dashboard = () => {
     direction: "dec",
   });
   const [page, setPage] = useState(0);
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const [rowsPerPage, setRowsPerPage] = useState(isMobile ? 5 : 8);
 
   useEffect(() => {
@@ -95,7 +92,7 @@ const Dashboard = () => {
     setIsModalOpen(false);
     setSelectedPost(null);
   };
-  
+
   //add or edit blog
   const handleFormSubmit = (values) => {
     if (modalMode === "add") {
@@ -140,7 +137,12 @@ const Dashboard = () => {
             <SearchBar search={search} setSearch={setSearch} posts={posts} />
           </Box>
 
-          <MuiButton startIcon={<AddIcon  sx={{ fontSize: 18 }}/>} onClick={handleOpenAdd}>ADD BLOG</MuiButton>
+          <CustomButton
+            startIcon={<AddIcon sx={{ fontSize: 18 }} />}
+            onClick={handleOpenAdd}
+          >
+            ADD BLOG
+          </CustomButton>
         </Box>
 
         <BlogTable
@@ -163,7 +165,7 @@ const Dashboard = () => {
         onClose={handleCloseModal}
         title={
           modalMode === "add"
-          ? "ADD NEW BLOG"
+            ? "ADD NEW BLOG"
             : modalMode === "edit"
             ? "EDIT BLOG"
             : "CONFIRM DELETE"

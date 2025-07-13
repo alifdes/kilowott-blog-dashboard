@@ -14,12 +14,12 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { styled } from "@mui/material/styles";
 import { tableCellClasses } from "@mui/material/TableCell";
-import MuiButton from "../components/MuiButton";
+import CustomButton from "../../ui/CustomButton";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.grey[400],
-    color: "#666060", 
+    color: "#666060",
     fontWeight: "bold",
   },
   [`&.${tableCellClasses.body}`]: {
@@ -31,7 +31,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   "&:nth-of-type(odd)": {
     backgroundColor: theme.palette.action.hover,
   },
-  
 }));
 const BlogTable = ({
   posts,
@@ -106,21 +105,21 @@ const BlogTable = ({
                     alignItems="center"
                     gap={1.5}
                   >
-                    <MuiButton
+                    <CustomButton
                       onClick={() => onEdit(post)}
                       color="primary"
                       startIcon={<EditIcon sx={{ fontSize: 15 }} />}
                     >
                       Edit
-                    </MuiButton>
+                    </CustomButton>
 
-                    <MuiButton
+                    <CustomButton
                       onClick={() => onDelete(post)}
                       color="error"
                       startIcon={<DeleteIcon sx={{ fontSize: 15 }} />}
                     >
                       Delete
-                    </MuiButton>
+                    </CustomButton>
                   </Box>
                 </StyledTableCell>
               </StyledTableRow>
@@ -129,7 +128,6 @@ const BlogTable = ({
         </TableBody>
       </Table>
       <TablePagination
-
         component="div"
         count={totalCount}
         page={page}
@@ -141,12 +139,13 @@ const BlogTable = ({
         }}
         rowsPerPageOptions={[5, 10, 25]}
         sx={{
-          '.css-5n9wn6-MuiInputBase-root-MuiTablePagination-select': {
-            margin: '10px',
+          ".css-5n9wn6-MuiInputBase-root-MuiTablePagination-select": {
+            margin: "10px",
           },
-          '.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar .MuiTablePagination-actions':{
-            margin: '0px',
-          }
+          ".css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar .MuiTablePagination-actions":
+            {
+              margin: "0px",
+            },
         }}
       />
     </TableContainer>

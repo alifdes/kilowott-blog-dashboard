@@ -7,7 +7,7 @@ import {
   Box,
   useTheme,
 } from "@mui/material";
-import MuiButton from "../components/MuiButton";
+import CustomButton from "../ui/CustomButton";
 import CloseIcon from "@mui/icons-material/Close";
 
 const CustomModal = ({
@@ -115,17 +115,17 @@ const CustomModal = ({
       </DialogContent>
 
       <DialogActions sx={{ px: 3, pb: 2 }}>
-        <MuiButton onClick={onClose} color={"primary"}>
+        <CustomButton onClick={onClose} >
           {cancelText}
-        </MuiButton>
+        </CustomButton>
 
-        <MuiButton
+        <CustomButton
           onClick={onConfirm}
           color={isDelete ? "error" : "primary"}
           disabled={disableConfirm}
         >
           {isDelete ? "Delete" : confirmText}
-        </MuiButton>
+        </CustomButton>
       </DialogActions>
     </Dialog>
   );
